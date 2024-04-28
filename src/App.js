@@ -4,7 +4,9 @@ import {BrowserRouter as Router , Routes, Route} from 'react-router-dom'
 import Home from "./sites/Home"
 import About from './sites/About'
 import Contact from './sites/Contact'
-import Projects from './sites/Projects'
+import Portfolio from './sites/Portfolio'
+import Experience from './sites/Experience'
+import CV from './sites/CV'
 
 //components
 import Navbar from './components/NavBar'
@@ -16,13 +18,18 @@ function App() {
         <Router>
             <Navbar />
             <Routes>
-                <Route path="/" element= { <Home /> }></Route>
-                <Route path="/about" element= { <About /> }></Route>
-                <Route path="/projekte" element= { <Projects /> }></Route>                
+                <Route path="/#home" element= { <Home /> }></Route>
+                <Route path="/#about" element= { <About /> }></Route>
+                <Route path="/projekte" element= { <Portfolio /> }></Route>                
                 <Route path="/kontakt" element= { <Contact /> }></Route>
 
             </Routes>
         </Router>
+        <Home />
+        <About />
+        <Portfolio />
+        <Experience />
+        < CV />
     </div>
   );
 }

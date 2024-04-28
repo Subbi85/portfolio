@@ -7,7 +7,7 @@ import Sociallinks from '../components/Sociallinks'
 
 const Home = () => {
   return (
-    <div name="home" className='h-screen w-ful bg-gradient-to-b from-black via-black to-gray-800'>
+    <div name="home" className='h-screen w-ful bg-gradient-to-b from-black via-black to-gray-800' id="home">
       <div className='h-full max-w-screen-lg mx-auto flex flex-col items-center justify-centerh-full px-4 md:flex-row text-white'>
         <div className='flex flex-col justify-center h-full'>
           <h2 className='text-4xl sm:text-7xl font-bold text-white'>Ich bin ein Frontend Entwickler</h2>
