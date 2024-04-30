@@ -18,13 +18,11 @@ const Projects = () => {
             <div className='shadow-md shadow-gray-500 rounded-lg'>
               <img src={placeholderimage} alt=""  className='rounded-md duration-200 hover:scale-105'/> 
               <div className='flex items-center justify-center'>
-                <button className='w-1/2 px-6 py-3 hover:bg-blue-500 duration-200'>Link</button>
+                <button className='w-1/2 px-6 py-3 duration-200'>Link</button>
                 <button className='w-1/2 px-6 py-3 duration-200'>Code</button>
               </div>
             </div>
             
-
-     
             <div className='shadow-md shadow-gray-500 rounded-lg'>
               <img src={placeholderimage} alt=""  className='rounded-md duration-200 hover:scale-105'/>
               <div className='flex items-center justify-center'>
@@ -33,7 +31,6 @@ const Projects = () => {
               </div>
             </div>
             
-
             <div className='shadow-md shadow-gray-500 rounded-lg'>
               <img src={placeholderimage} alt=""  className='rounded-md duration-200 hover:scale-105'/>
               <div className='flex items-center justify-center'>
