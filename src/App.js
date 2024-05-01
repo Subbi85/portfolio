@@ -1,4 +1,5 @@
 import {BrowserRouter as Router , Routes, Route} from 'react-router-dom'
+import { useState } from 'react'
 
 //sites
 import Home from "./sites/Home"
@@ -11,12 +12,13 @@ import CV from './sites/CV'
 //components
 import Navbar from './components/NavBar'
 
-
 function App() {
+
+  const [lightTheme, setLightTheme] =useState(false)
   return (
     <div className="App">
         <Router>
-            <Navbar />
+            <Navbar lightTheme= {lightTheme} setLightTheme = {setLightTheme} />
             <Routes>
                 <Route path="/#home" element= { <Home /> }></Route>
                 <Route path="/#about" element= { <About /> }></Route>
@@ -25,7 +27,7 @@ function App() {
 
             </Routes>
         </Router>
-        <Home />
+        <Home lightTheme= {lightTheme} setLightTheme = {setLightTheme} />
         <About />
         <Portfolio />
         <Experience />
