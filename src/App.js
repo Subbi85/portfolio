@@ -16,7 +16,7 @@ function App() {
 
   const [lightTheme, setLightTheme] =useState(false)
   return (
-    <div className="App">
+    <div className="App scroll-smooth">
         <Router>
             <Navbar lightTheme= {lightTheme} setLightTheme = {setLightTheme} />
             <Routes>
@@ -31,7 +31,8 @@ function App() {
         <About />
         <Portfolio />
         <Experience />
-        < CV />
+        <CV />
+        <Contact />
     </div>
   );
 }

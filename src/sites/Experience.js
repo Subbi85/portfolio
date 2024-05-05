@@ -7,15 +7,15 @@ import { IoLogoJavascript } from "react-icons/io5";
 
 const Experience = () => {
   return (
-    <div name="experience" className='bg-gradient-to-b from-gray-500 to-black w-full h-screen'>
+    <div name="experience" id="experience" className='bg-gradient-to-b from-gray-500 to-black w-full h-screen p-4'>
       <div className='max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full text-white'>
             <div>
-                <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline font-signature'>Experience</p>
+                <p className='text-4xl font-bold border-b-4 border-cyan-500 p-2 inline font-signature'>Experience</p>
                 <p className='py-6 '>Techs i worked with</p>
             </div>
 
             <div className='w-full grid grid-cols-3 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0'>
-                <div className='hover:scale-105  duration-500 rounded-lg py-2 hover:shadow-lg hover:shadow-red-500'>
+                <div className='hover:scale-105 duration-500 rounded-lg py-2 hover:shadow-lg hover:shadow-red-500'>
                     <FaHtml5 size={80} className='w-20 mx-auto' />
                     <p className='mt-4'>HTML</p>
                 </div>
@@ -57,7 +57,7 @@ const Experience = () => {
             </div>           
 
             <div>
-                <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline font-signature'>Neue Techs</p>
+                <p className='text-4xl font-bold border-b-4 border-cyan-500 p-2 inline font-signature'>Neue Techs</p>
                 <p className='py-6 '>Derzeit arbeite ich mit</p>
             </div>
 

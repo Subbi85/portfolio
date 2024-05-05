@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaGithub, FaLinkedin, FaXing } from 'react-icons/fa'
+import { FaLinkedin, FaXing } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 
@@ -8,28 +8,21 @@ const Sociallinks = () => {
     <div className='hidden lg:flex flex-col top-[35%] left-0 fixed'>
         <ul>
             <li className='flex justify-between items-center w-40 h-14 px-4 ml-[-100px] bg-gray-500 hover:ml-0 duration-300'>
-                <a href='https://www.youtube.com/watch?v=LpZrAjU6Hhk&t=3499s' className='flex justify-between items-center w-full text-white' target='_blank' rel='noreferrer'>
+                <a href='https://www.linkedin.com/in/lars-schleyer-6a4949181/' className='flex justify-between items-center w-full text-white' target='_blank' rel='noreferrer'>
                     <>
                         LinkedIn <FaLinkedin size={25} />
                     </>
                 </a>
             </li>
             <li className='flex justify-between items-center w-40 h-14 px-4 ml-[-100px] bg-gray-500 hover:ml-0 duration-300' target='_blank' rel='noreferrer'>
-                <a href='https://www.youtube.com/watch?v=LpZrAjU6Hhk&t=3499s' className='flex justify-between items-center w-full text-white'>
+                <a href='https://www.xing.com/profile/Lars_Schleyer/web_profiles' className='flex justify-between items-center w-full text-white' target='_blank' rel='noreferrer'>
                     <>
                         Xing <FaXing  size={25} />
                     </>
                 </a>
             </li>
             <li className='flex justify-between items-center w-40 h-14 px-4 ml-[-100px] bg-gray-500 hover:ml-0 duration-300' target='_blank' rel='noreferrer'>
-                <a href='https://www.youtube.com/watch?v=LpZrAjU6Hhk&t=3499s' className='flex justify-between items-center w-full text-white'>
-                    <>
-                        Github <FaGithub size={25} />
-                    </>
-                </a>
-            </li>
-            <li className='flex justify-between items-center w-40 h-14 px-4 ml-[-100px] bg-gray-500 hover:ml-0 duration-300' target='_blank' rel='noreferrer'>
-                <a href='https://www.youtube.com/watch?v=LpZrAjU6Hhk&t=3499s' className='flex justify-between items-center w-full text-white'>
+                <a href='mailto:lars.schleyer@gmx.de' className='flex justify-between items-center w-full text-white'>
                     <>
                         Mail <HiOutlineMail size={25} />
                     </>
