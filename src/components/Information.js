@@ -29,7 +29,7 @@ const Information = () => {
               Zuerst war die zweite Ausbildung, dann wurde ein Hobby und zum Schluss ein Beruf. 
             </div>
             <div>
-              <button className='group text-white w-fit px-6 py-3 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'> 
+              <button className='group text-white w-fit px-6 py-3 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-blue-500 cursor-pointer'> 
                 Kontakt
               </button>
             </div>

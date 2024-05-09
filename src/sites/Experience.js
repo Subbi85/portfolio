@@ -7,11 +7,11 @@ import { IoLogoJavascript } from "react-icons/io5";
 
 const Experience = () => {
   return (
-    <div name="experience" id="experience" className='bg-gradient-to-b from-gray-500 to-black w-full h-screen p-4'>
-      <div className='max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full text-white'>
+    <div name="experience" id="techstack" className='bg-gradient-to-b from-black to-gray-500 w-full h-auto p-4'>
+      <div className='max-w-screen-lg mx-auto flex flex-col justify-center w-full h-auto text-white mt-[80px]'>
             <div>
-                <p className='text-4xl font-bold border-b-4 border-cyan-500 p-2 inline font-signature'>Experience</p>
-                <p className='py-6 '>Techs i worked with</p>
+                <p className='text-4xl font-bold border-b-4 border-blue-500 p-2 inline font-signature'>Tech Stack</p>
+                <p className='py-6'>Im Arbeitsalltag habe ich Erfahrungen mit folgenden Techs gesammelt:</p>
             </div>
 
             <div className='w-full grid grid-cols-3 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0'>
@@ -57,8 +57,8 @@ const Experience = () => {
             </div>           
 
             <div>
-                <p className='text-4xl font-bold border-b-4 border-cyan-500 p-2 inline font-signature'>Neue Techs</p>
-                <p className='py-6 '>Derzeit arbeite ich mit</p>
+                <p className='text-4xl font-bold border-b-4 border-blue-500 p-2 inline font-signature'>Neue Techs</p>
+                <p className='py-6 '>Außerdem interessiere ich mich derzeit für:</p>
             </div>
 
             <div className='w-full grid grid-cols-3 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0'>
@@ -67,7 +67,7 @@ const Experience = () => {
                     <p className='mt-4'>React</p>
                 </div>
 
-                <div className='hover:scale-105  duration-500 rounded-lg py-2 hover:shadow-lg hover:shadow-cyan-500'>
+                <div className='hover:scale-105  duration-500 rounded-lg py-2 hover:shadow-lg hover:shadow-blue-500'>
                     <SiTailwindcss size={80} className='w-20 mx-auto' />
                     <p className='mt-4'>Tailwind</p>
                 </div>

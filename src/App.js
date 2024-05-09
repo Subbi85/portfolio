@@ -8,6 +8,7 @@ import Contact from './sites/Contact'
 import Portfolio from './sites/Portfolio'
 import Experience from './sites/Experience'
 import CV from './sites/CV'
+import Footer from './sites/Footer'
 
 //components
 import Navbar from './components/NavBar'
@@ -33,6 +34,7 @@ function App() {
         <Experience />
         <CV />
         <Contact />
+        <Footer />
     </div>
   );
 }

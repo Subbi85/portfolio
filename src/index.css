@@ -26,16 +26,9 @@ code {
     monospace;
 }
 
-#about_container{
-  grid-template-columns: 35% 50%;
-  gap: 10%;
+#title_logo{
+  text-shadow: #2563eb 20px 8px 14px;
 }
-
-#about_cards{
-  grid-template-columns: repeat(3, 1fr);
-  gap:1.5rem;
-}
-
 
 /* Media Queries */
 /* Medium */
@@ -44,8 +37,5 @@ code {
     grid-template-columns: 1fr;
     gap:0;
   }
-
-
 }
 
-/* Klein */

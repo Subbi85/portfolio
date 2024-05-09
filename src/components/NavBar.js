@@ -19,7 +19,7 @@ const NavBar = ({lightTheme, setLightTheme}) => {
     <div className='flex justify-between items-center w-full h-20 text-white fixed bg-black px-4 z-10'>
       <div>
         <a href="/#home">
-          <h1 className='text-5xl font-signature ml-2'>Schleyer</h1>
+          <h1 id="title_logo" className='text-5xl font-signature ml-2'>Schleyer</h1>
         </a>
       </div>
         <div className='invisible'>
@@ -33,19 +33,19 @@ const NavBar = ({lightTheme, setLightTheme}) => {
             id="flexSwitchCheckDefault01" 
             onClick={toggelTheme}/>
 
-          <a href="/#about" className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
+          <a href="/#about" className='hover:text-blue-500 px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
               <h1>Über mich</h1>
           </a>
-          <a href="/#projekte" className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
-              <h1>Projekte</h1>
+          <a href="/#portfolio" className='hover:text-blue-500 px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
+              <h1>Portfolio</h1>
           </a>
-          <a href="/#experience" className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
-              <h1>Tech</h1>
+          <a href="/#techstack" className='hover:text-blue-500 px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
+              <h1>Techstack</h1>
           </a>
-          <a href="/#lebenslauf" className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
+          <a href="/#lebenslauf" className='hover:text-blue-500 px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
               <h1>Lebenslauf</h1>
           </a>               
-          <a href="/#kontakt" className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
+          <a href="/#kontakt" className='hover:text-blue-500 px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
               <h1>Kontakt</h1>
           </a>          
         </ul>
@@ -57,12 +57,12 @@ const NavBar = ({lightTheme, setLightTheme}) => {
       {nav && (
 
       <ul id="navMobile" className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-black text-gray-500'>
-        <li className='px-4 cursor-pointer py-6 text-4xl capitalize hover:text-cyan-500'><a href="/#home" rel="noreferrer" onClick={hideNav} >Home</a></li>
-        <li className='px-4 cursor-pointer py-6 text-4xl capitalize hover:text-cyan-500'><a href="/#about" rel="noreferrer" onClick={hideNav} >Über mich</a></li>
-        <li className='px-4 cursor-pointer py-6 text-4xl capitalize hover:text-cyan-500'><a href="/#projekte" rel="noreferrer" onClick={hideNav} >Projekte</a></li>
-        <li className='px-4 cursor-pointer py-6 text-4xl capitalize hover:text-cyan-500'><a href="/#experience" rel="noreferrer" onClick={hideNav} >Techstack</a></li>
-        <li className='px-4 cursor-pointer py-6 text-4xl capitalize hover:text-cyan-500'><a href="/#lebenslauf" rel="noreferrer" onClick={hideNav} >CV</a></li>
-        <li className='px-4 cursor-pointer py-6 text-4xl capitalize hover:text-cyan-500'><a href="/#kontakt" rel="noreferrer" onClick={hideNav} >Kontakt</a></li>
+        <li className='px-4 cursor-pointer py-6 text-4xl capitalize hover:text-blue-500'><a href="/#home" rel="noreferrer" onClick={()=> setNav(!nav)} >Home</a></li>
+        <li className='px-4 cursor-pointer py-6 text-4xl capitalize hover:text-blue-500'><a href="/#about" rel="noreferrer" onClick={()=> setNav(!nav)} >Über mich</a></li>
+        <li className='px-4 cursor-pointer py-6 text-4xl capitalize hover:text-blue-500'><a href="/#portfolio" rel="noreferrer" onClick={()=> setNav(!nav)} >portfolio</a></li>
+        <li className='px-4 cursor-pointer py-6 text-4xl capitalize hover:text-blue-500'><a href="/#techstack" rel="noreferrer" onClick={()=> setNav(!nav)} >Techstack</a></li>
+        <li className='px-4 cursor-pointer py-6 text-4xl capitalize hover:text-blue-500'><a href="/#lebenslauf" rel="noreferrer" onClick={()=> setNav(!nav)} >CV</a></li>
+        <li className='px-4 cursor-pointer py-6 text-4xl capitalize hover:text-blue-500'><a href="/#kontakt" rel="noreferrer" onClick={()=> setNav(!nav)} >Kontakt</a></li>
       </ul>
       )}
     </div>
