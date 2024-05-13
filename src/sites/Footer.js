@@ -1,23 +1,19 @@
 import React from 'react'
 
+//Icons
+import { FaPhoneAlt } from "react-icons/fa";
+import { CiLocationOn } from "react-icons/ci";
+import { FaRegCopyright } from "react-icons/fa";
+
 const Footer = () => {
   return (
-
-    <div name="footer" className='h-auto w-full bg-gradient-to-b from-blue-500 to-blue-800 p-4' id="kontakt">
+    <div name="footer" className='h-auto w-full bg-gray-500 p-4' id="kontakt">
         <div className='w-full lg:max-w-screen-lg mx-auto flex flex-col justify-center text-white pt-6'>
-        
             <div className='flex flex-col sm:flex-row justify-between p-6'>
-                <p className='py-2'>Lars Schleyer <br/> Webentwickler</p>
-                <p className='py-2'>Ahrensböker Str. 116 <br/>23617 Stockelsdorf</p>
-                <p className='py-2'>0175/6615083 <br/>lars.schleyer@gmx.de</p>
-
+                <p className='py-2 flex jusify-center align-center'><FaRegCopyright size={15}/> <span className='px-2'>Lars Schleyer / Webentwickler</span></p>
             </div>
-
         </div>
     </div>
-
-
-
   )
 }
 

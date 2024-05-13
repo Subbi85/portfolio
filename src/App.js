@@ -1,5 +1,4 @@
-import {BrowserRouter as Router , Routes, Route} from 'react-router-dom'
-import { useState } from 'react'
+import posthog from 'posthog-js'
 
 //sites
 import Home from "./sites/Home"
@@ -9,26 +8,17 @@ import Portfolio from './sites/Portfolio'
 import Experience from './sites/Experience'
 import CV from './sites/CV'
 import Footer from './sites/Footer'
+import Cookiebanner from './components/Cookiebanner'
 
 //components
 import Navbar from './components/NavBar'
 
 function App() {
-
-  const [lightTheme, setLightTheme] =useState(false)
   return (
     <div className="App scroll-smooth">
-        <Router>
-            <Navbar lightTheme= {lightTheme} setLightTheme = {setLightTheme} />
-            <Routes>
-                <Route path="/#home" element= { <Home /> }></Route>
-                <Route path="/#about" element= { <About /> }></Route>
-                <Route path="/projekte" element= { <Portfolio /> }></Route>                
-                <Route path="/kontakt" element= { <Contact /> }></Route>
-
-            </Routes>
-        </Router>
-        <Home lightTheme= {lightTheme} setLightTheme = {setLightTheme} />
+        <Navbar />
+        <Home />
+        {posthog.has_opted_in_capturing() || posthog.has_opted_out_capturing ? null : <Cookiebanner />}
         <About />
         <Portfolio />
         <Experience />

@@ -10,7 +10,7 @@ const Experience = () => {
     <div name="experience" id="techstack" className='bg-gradient-to-b from-black to-gray-500 w-full h-auto p-4'>
       <div className='max-w-screen-lg mx-auto flex flex-col justify-center w-full h-auto text-white mt-[80px]'>
             <div>
-                <p className='text-4xl font-bold border-b-4 border-blue-500 p-2 inline font-signature'>Tech Stack</p>
+                <p className='text-4xl font-bold border-b-4 border-blue-800 p-2 inline font-signature'>Tech Stack</p>
                 <p className='py-6'>Im Arbeitsalltag habe ich Erfahrungen mit folgenden Techs gesammelt:</p>
             </div>
 
@@ -57,7 +57,7 @@ const Experience = () => {
             </div>           
 
             <div>
-                <p className='text-4xl font-bold border-b-4 border-blue-500 p-2 inline font-signature'>Neue Techs</p>
+                <p className='text-4xl font-bold border-b-4 border-blue-800 p-2 inline font-signature'>Neue Techs</p>
                 <p className='py-6 '>Außerdem interessiere ich mich derzeit für:</p>
             </div>
 

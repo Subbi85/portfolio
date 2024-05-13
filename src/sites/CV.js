@@ -1,23 +1,29 @@
 import React from 'react';
+import {useState} from "react"
 
 //Icons
-import { SiTailwindcss, SiCraftcms } from "react-icons/si";
-import { FaHtml5, FaReact,FaNeos, FaBootstrap, FaTypo3, FaPhp, FaCss3Alt, FaArrowAltCircleDown } from "react-icons/fa";
+import { SiCraftcms } from "react-icons/si";
+import { FaHtml5, FaNeos, FaBootstrap, FaTypo3, FaPhp, FaCss3Alt, FaArrowAltCircleDown } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 
 export default function App() {
 
-  const hideTasks=(event)=>{
-    console.log("Klicked!")
-    console.log(event.target.parentElement.childNodes)
-    
+  const [visible, setVisible] = useState(false)
+  const [nhVisible, setNhVisible] = useState(false)
+
+  const toggleVisibility=()=>{
+    setVisible(!visible)
+  }
+
+  const toggleNhVisibility=()=>{
+    setNhVisible(!nhVisible)
   }
 
   return (
     <div name="lebenslauf" id="lebenslauf" className='bg-gradient-to-b from-gray-500 to-black w-full p-4 h-auto scroll-mt-5'>
       <div className='w-12/12 md:w-full lg:max-w-screen-lg mx-auto flex flex-col justify-center text-white h-auto mt-[60px]'>
             <div>
-                <p className='text-4xl font-bold border-b-4 border-blue-500 inline font-signature'>Meine Stationen</p>
+                <p className='text-4xl font-bold border-b-4 border-blue-800 inline font-signature'>Meine Stationen</p>
                 <p className='py-6 '></p>
             </div>
 
@@ -25,7 +31,7 @@ export default function App() {
 
               {/* <!--First item--> */}
               <li>
-                <div id="first-item" className="flex-start md:flex">
+                <div id="first-item" className="flex-start md:flex ">
                   <div className="-ml-[13px] flex h-[25px] w-[25px] items-center justify-center rounded-full bg-gray-500 text-info-700">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -40,10 +46,10 @@ export default function App() {
                       />
                     </svg>
                   </div>
-                  <div id="content" className="mb-10 ml-6 block max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10 relative">
-                  <span class="absolute flex h-4 w-4 right-0 -top-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-4 w-4 bg-blue-500"></span>
+                  <div id="content" className="mb-10 ml-6 block max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10 relative hover:shadow-lg hover:shadow-blue-500">
+                  <span className="absolute flex h-4 w-4 right-0 -top-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-4 w-4 bg-blue-500"></span>
                   </span>
                     <div className="mb-4 flex justify-between">
                       <p
@@ -56,13 +62,9 @@ export default function App() {
                       </p>
                     </div>
                     <p className="mb-6 text-neutral-700 dark:text-neutral-200">
-                      Aktuell befinde ich mich auf der Suche nach neuen beruflichen Herausforderungen. Meine berfuliche Zukunft - wie es immer so schön heißt - sehe ich entweder im <br/>
+                      Aktuell befinde ich mich auf der Suche nach neuen beruflichen Herausforderungen. Meine berfuliche Zukunft - wie es immer so schön heißt - sehe ich entweder im Bereich
                       der CMS - am liebsten WordPress - oder in Richtung React.js. Sehr gern mit einem Fokus auf die Frontend-Entwicklung.
                     </p>
-
-                    <div className='flex flex-row justify-start'>
-                      <FaReact size={40} /> <SiTailwindcss size={60} />
-                    </div>
                   </div>
                 </div>
               </li>
@@ -84,7 +86,7 @@ export default function App() {
                       />
                     </svg>
                   </div>
-                  <div id="content" className="mb-10 ml-6 block max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10 relative">
+                  <div id="content" className="mb-10 ml-6 block max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10 relative hover:shadow-lg hover:shadow-blue-500">
                     <div className="mb-4 flex justify-between">
                       <a
                         href="https://www.globit.com/" target="_blank" rel="noreferrer"
@@ -98,18 +100,21 @@ export default function App() {
                     Die Globit GmbH ist ein IT Dienstleister, der sich auf Kongresswebsites - in Zusammenarbeit mit der CPO Hanser - für medizinische Kongresse 
                       spezialisiert hat.
                     </p>
-                    <ol className='m-4 list-disc hidden'>
+                    <ol className={`m-4 list-disc ${visible ? 'h-auto' : 'h-0 overflow-hidden'}`}>
                       <li>Wartung und Pflege von Websites</li>
                       <li>Aufbau und Konfiguration von Websites mit Neos CMS und relevanten Plugins</li>
                       <li>Zusammenarbeit mit dem Web-Hoster zur Verknüpfung von Domains</li>
                       <li>Entwicklung und Wartung von Neos-Elementen und Plugis</li>
                       <li>Zusammenarbeit mit dem UI/UX-Design Team zur Ausarbeitung und Umsetzung von Design-Anforderungen </li>
                       <li>CSS-basierte Anspassungen von Design-Elementen</li>
+                      <li className='list-none py-4'>
+                        <div className='flex flex-row justify-start'>
+                          < FaHtml5 size={40} /> <FaCss3Alt size={40} /> <FaPhp size={40} /> <IoLogoJavascript size={40} /> <FaBootstrap size={40} /> <FaNeos  size={40} />
+                        </div>
+                      </li>
                     </ol>
-                    <div className='flex flex-row justify-start'>
-                      < FaHtml5 size={40} /> <FaCss3Alt size={40} /> <FaPhp size={40} /> <IoLogoJavascript size={40} /> <FaBootstrap size={40} /> <FaNeos  size={40} />
-                    </div>
-                    <div className='absolute right-5 bottom-5' onClick={hideTasks}>
+
+                    <div className={`m-4 list-disc ${visible ? 'rotate-180 text-blue-500' : 'text-white'} duration-200 absolute right-5 bottom-5 hover:text-blue-500`} onClick={(e) => toggleVisibility(e)}>
                       <FaArrowAltCircleDown size={20}/>
                     </div>
                   </div>
@@ -133,7 +138,7 @@ export default function App() {
                       />
                     </svg>
                   </div>
-                  <div id="content" className="mb-10 ml-6 block max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10 relative">
+                  <div id="content" className="mb-10 ml-6 block max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10 relative hover:shadow-lg hover:shadow-blue-500">
                     <div className="mb-4 flex justify-between">
                     <a
                         href="https://www.netzhaut.de/" target="_blank" rel="noreferrer"
@@ -147,21 +152,24 @@ export default function App() {
                     Im Rahmen meines ersten Jobs in der Webentwicklung, arbeitete ich bei der Webagentur Netzhaut GmbH in Würzburg. Meine Aufgaben im
                       Arbeitsalltag umfassten:
                     </p>
-                    <ol className='m-4 list-disc'>
-                        <li>Umsetzung grafischer Entwürfe</li>
-                        <li>Erstellen von Webpräsenzen auf Basis von Typo3 und Craft CMS</li>
-                        <li>Erstellen von Online Shops mit Shopware </li>
-                        <li>Erweiterung und Support von bestehenden Webpräsenzen</li>
-                        <li>Kundenschulungen</li>
-                        <li>Projektbetreuung</li>
+                    <ol className={`m-4 list-disc ${nhVisible ? 'h-auto' : 'h-0 overflow-hidden'} duration-200`}>
+                      <li>Umsetzung grafischer Entwürfe</li>
+                      <li>Erstellen von Webpräsenzen auf Basis von Typo3 und Craft CMS</li>
+                      <li>Erstellen von Online Shops mit Shopware </li>
+                      <li>Erweiterung und Support von bestehenden Webpräsenzen</li>
+                      <li>Kundenschulungen</li>
+                      <li>Projektbetreuung</li>
+                      <li className='list-none py-4'>
+                        <div className='flex flex-row justify-start'>
+                          < FaHtml5 size={40} /> <FaCss3Alt size={40} /> <FaPhp size={40} /> <IoLogoJavascript size={40} /> <FaBootstrap size={40} /> <SiCraftcms  size={40} /> <FaTypo3 size={40} />
+                        </div>
+                      </li>
+                    </ol>
 
-                        <div className='absolute right-5 bottom-5' onClick={hideTasks}>fes</div>
-                      </ol>
 
-                    <div className='flex flex-row justify-start'>
-                      < FaHtml5 size={40} /> <FaCss3Alt size={40} /> <FaPhp size={40} /> <IoLogoJavascript size={40} /> <FaBootstrap size={40} /> <SiCraftcms  size={40} /> <FaTypo3 size={40} />
+                    <div className={`m-4 list-disc ${nhVisible ? 'rotate-180 text-blue-500' : 'text-white'} duration-200 absolute right-5 bottom-5 hover:text-blue-500`} onClick={toggleNhVisibility}>
+                      <FaArrowAltCircleDown size={20}/>
                     </div>
-
                   </div>
                 </div>
               </li>
@@ -183,23 +191,22 @@ export default function App() {
                       />
                     </svg>
                   </div>
-                  <div className="mb-10 ml-6 block max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10">
+                  <div className="mb-10 ml-6 block max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10 hover:shadow-lg hover:shadow-blue-500">
                     <div className="mb-4 flex justify-between">
-                      <a
+                      <p
                         href="#!"
                         className="text-xl text-info transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700"
                       >
-                        JavaScript Bootcamp
-                      </a>
+                        <span className='font-bold'>JavaScript Bootcamp</span>
+                        <p>AlfaTraining, Würzburg</p>
+                        
+                      </p>
                       <p className="text-xl text-info transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700"
                       >
                       </p>
                     </div>
                     <p className="mb-6 text-neutral-700 dark:text-neutral-200">
-                      Voluptatibus temporibus esse illum eum aspernatur, fugiat
-                      suscipit natus! Eum corporis illum nihil officiis tempore.
-                      Excepturi illo natus libero sit doloremque, laborum molestias
-                      rerum pariatur quam ipsam necessitatibus incidunt, explicabo.
+                      Weiterbildung im Bereich JavaScript, für einen besseren Jobeinstieg. Der Lehrgang umfasste alle relevanten Themen von DOM-Manipulation über asynchrone Funktionen, Promisses bis hin zu Node.js den bekannten Frameworks React & Co.
                     </p>
                   </div>
                 </div>
@@ -222,7 +229,7 @@ export default function App() {
                       />
                     </svg>
                   </div>
-                  <div className="mb-10 ml-6 block max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10">
+                  <div className="mb-10 ml-6 block max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10 hover:shadow-lg hover:shadow-blue-500">
                     <div className="mb-4 flex justify-between">
                       <a
                         href="https://www.apicon.de/"
@@ -238,7 +245,7 @@ export default function App() {
                       </p>
                     </div>
                     <p className="mb-6 text-neutral-700 dark:text-neutral-200">
-                      Meine zweite Berufsausbildung absolvierte ich bei der Apicon, einem SAP-Systemhaus in Schweinfurt. Der Fokus lag damals auf der Programmiersprache ABAP. Im Rahmen einer Projektarbeit <br />
+                      Meine zweite Berufsausbildung absolvierte ich bei der Apicon, einem SAP-Systemhaus in Schweinfurt. Der Fokus lag damals auf der Programmiersprache ABAP. Im Rahmen einer Projektarbeit
                       in der Berufsschule gab es erste Berührungspunkte zur Webentwicklung und ich war schnell Feuer und Flamme.
                     </p>
                   </div>

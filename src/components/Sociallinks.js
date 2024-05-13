@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaLinkedin, FaXing } from 'react-icons/fa'
+import { FaLinkedin, FaXing,FaGithub } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 
@@ -22,19 +22,20 @@ const Sociallinks = () => {
                 </a>
             </li>
             <li className='flex justify-between items-center w-40 h-14 px-4 ml-[-100px] bg-gray-500 hover:ml-0 duration-300 hover:shadow-lg hover:shadow-blue-500 hover:rounded-r-md' target='_blank' rel='noreferrer'>
+                <a href='https://github.com/Subbi85' className='flex justify-between items-center w-full text-white' target='_blank' rel='noreferrer'>
+                    <>
+                        Github <FaGithub size={25} />
+                    </>
+                </a>
+            </li>
+            <li className='flex justify-between items-center w-40 h-14 px-4 ml-[-100px] bg-gray-500 hover:ml-0 duration-300 hover:shadow-lg hover:shadow-blue-500 hover:rounded-r-md' target='_blank' rel='noreferrer'>
                 <a href='mailto:lars.schleyer@gmx.de' className='flex justify-between items-center w-full text-white'>
                     <>
                         Mail <HiOutlineMail size={25} />
                     </>
                 </a>
             </li>
-            <li className='flex justify-between items-center w-40 h-14 px-4 ml-[-100px] bg-gray-500 hover:ml-0 duration-300 hover:shadow-lg hover:shadow-blue-500 hover:rounded-r-md' target='_blank' rel='noreferrer'>
-                <a href='http://localhost:3000/assets/dlc/Hero.png' className='flex justify-between items-center w-full text-white' download="http://localhost:3000/assets/dlc/Hero.png">
-                    <>
-                        Lebenslauf <BsFillPersonLinesFill size={25} />
-                    </>
-                </a>
-            </li>
+
         </ul>
     </div>
   )
