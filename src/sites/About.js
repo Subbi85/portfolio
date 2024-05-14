@@ -47,7 +47,7 @@ function About() {
             <div className='my-8'>
               <h2 className='text-3xl font-bold py-4'>Herzlich Willkommen</h2>
               <p>
-              In meiner bisherigen beruflichen Laufbahn habe ich umfangreiche Erfahrungen in der Entwicklung von Webseiten gesammelt. Ich beherrsche eine Mehrzahl von Programmiersprachen und Frameworks, darunter HTML, CSS, JavaScript. Darüber hinaus interessiere ich mich für bekannte Backend-Technologien wie Node.js und PHP. Zudem habe ich Erfahrung in der Arbeit mit Content-Management-Systemen wie WordPress, Typo3 und Craft gesammelt.<br/> <br/>
+              In meiner bisherigen beruflichen Laufbahn habe ich umfangreiche Erfahrungen in der Entwicklung von Webseiten gesammelt. Ich beherrsche die gängigen Programmiersprachen und Frameworks, darunter HTML, CSS, JavaScript. Darüber hinaus interessiere ich mich für bekannte Backend-Technologien wie Node.js und PHP. Zudem habe ich Erfahrung in der Arbeit mit Content-Management-Systemen wie WordPress, Typo3 und Craft gesammelt.<br/> <br/>
               Besonders wichtig ist mir, stets auf dem neuesten Stand der Technik zu bleiben und mich kontinuierlich weiterzubilden. Ich bin daher immer bestrebt, neue Technologien und Best Practices zu erlernen und in meine Arbeit zu integrieren.
               <br/><br/>
               Schauen Sie sich gern um<br/>

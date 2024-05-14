@@ -2,7 +2,6 @@
 $commitMessage = Read-Host "Enter your commit message"
 
 # Navigate to your project directory
-cd "path\to\your\project"
 
 # Stage all changes for commit
 git add .
@@ -20,11 +19,11 @@ npm run build
 Add-Type -Path "WinSCPnet.dll"
 
 # Configuration
-$sftpHost = "your.sftp.host"
-$sftpUsername = "your_sftp_username"
-$sftpPassword = "your_sftp_password"
-$localPath = "path\to\your\project\build-directory"
-$remotePath = "/path/on/sftp/server"
+$sftpHost = "ssh.strato.de"
+$sftpUsername = "542289190.swh.strato-hosting.eu"
+$sftpPassword = "!strato2024"
+$localPath = "/build"
+$remotePath = "/"
 
 # Connect to the SFTP server
 $sessionOptions = New-Object WinSCP.SessionOptions -Property @{
