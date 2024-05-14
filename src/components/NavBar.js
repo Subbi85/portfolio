@@ -61,7 +61,12 @@ const NavBar = ({lightTheme, setLightTheme}) => {
 
       {nav && (
 
-      <ul id="navMobile" className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-black text-gray-500'>
+      <ul id="navMobile" className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-blue-800 text-gray-500'>
+        
+        <li onClick={()=> setNav(!nav)} className='cursor-pointer pr-4 z-1 text-gray-500 hover:text-blue-500 absolute top-6 right-4 md:hidden'>
+          {nav ? <FaTimes size={30} /> : <FaBars size={30}/>}
+        </li>
+
         <li className='px-4 cursor-pointer py-6 text-4xl capitalize navLink hover:text-blue-500'><a href="/#home" rel="noreferrer" onClick={()=> setNav(!nav)} >Home</a></li>
         <li className='px-4 cursor-pointer py-6 text-4xl capitalize navLink hover:text-blue-500'><a href="/#about" rel="noreferrer" onClick={()=> setNav(!nav)} >Über mich</a></li>
         <li className='px-4 cursor-pointer py-6 text-4xl capitalize navLink hover:text-blue-500'><a href="/#portfolio" rel="noreferrer" onClick={()=> setNav(!nav)} >portfolio</a></li>

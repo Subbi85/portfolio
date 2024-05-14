@@ -41,7 +41,7 @@ const Contact = () => {
             
             <MultistepForm showStepNumber={true}/>
 
-            <pre className="hidden sm:block text-xs md:text-md mb-10 ml-6 max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10 max-h-[330px]">
+            <pre className="hidden sm:block text-md md:text-md mb-10 ml-6 max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10 max-h-[330px]">
                 LarsSchleyer: <br/>{Object.keys(Schleyer).map(key => renderAttribute(key, Schleyer[key]))}
             </pre>
           </div>
