@@ -31,7 +31,7 @@ function About() {
               </article>
 
               <article className='group bg-blue-800 hover:bg-transparent hover:border-blue-800 border-solid border-2 border-transparent rounded-lg p-8 text-center duration-200 cursor-default min-w-[162px]'>
-                <FaRegFolderOpen  size={45} className='group-hover:text-blue-500 text-center m-auto mb-4'/>
+                <FaRegFolderOpen  size={45} className='group-hover:text-blue-800 text-center m-auto mb-4'/>
                 <h5 className='text-xl font-bold group-hover:text-blue-800'> Projekte</h5>
                 <small className='group-hover:text-blue-800'>20+ Websites</small>
               </article>
