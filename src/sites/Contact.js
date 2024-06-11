@@ -1,6 +1,7 @@
 import React from 'react'
 
 import MultistepForm from '../components/Form/MultistepForm';
+import privateLogo from '../assets/img/logo.png'
 
 const Contact = () => {
 
@@ -28,7 +29,6 @@ const Contact = () => {
     );
 };
 
-
   return (
     <div name="kontakt" className='h-auto w-full bg-gradient-to-b from-black to-gray-500 p-4' id="kontakt">
       <div className='w-full lg:max-w-screen-lg mx-auto flex flex-col justify-center text-white pt-6'>
@@ -45,6 +45,9 @@ const Contact = () => {
                 LarsSchleyer: <br/>{Object.keys(Schleyer).map(key => renderAttribute(key, Schleyer[key]))}
             </pre>
           </div>
+      </div>
+      <div className='body'>
+        <div className="slider-thumb"><p>owldndolan</p></div>
       </div>
     </div>
   )

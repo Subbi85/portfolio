@@ -10,6 +10,9 @@ import CV from './sites/CV'
 import Footer from './sites/Footer'
 import Cookiebanner from './components/Cookiebanner'
 
+import SlideIn from './components/SlideIn'
+
+
 //components
 import Navbar from './components/NavBar'
 
@@ -24,6 +27,7 @@ function App() {
         <Experience />
         <CV />
         <Contact />
+        < SlideIn />
         <Footer />
     </div>
   );

@@ -15,9 +15,9 @@ function About() {
           <p className='py-6 '></p>
         </div>
 
-        <div className='flex flex-col md:grid md:grid-cols-2' id="about_container">
+        <div className='flex flex-col md:grid md:grid-cols-2 ' id="about_container">
           <div id="about_me" className='w-1/2 mb-8 lg:w-11/12 m-auto lg:m-0 grid items-center w-50 aspect-square rounded-3xl bg-gradient-to-tr from-transparent via-blue-500 to-blue-800'>
-            <div id="about_me_image" className='rounded overflow-hidden hover:rotate-0 duration-200'>
+            <div id="about_me_image" className=''>
               <Image className=""/>
             </div>
           </div>
@@ -57,9 +57,6 @@ function About() {
 
             <a href='/#kontakt' className='text-white w-fit px-6 py-3 flex items-center rounded-lg bg-gradient-to-r from-blue-500 to-blue-800 cursor-pointer mb-[40px]'>Kontakt</a>
           </div>
-
-
-
         </div>
       </div>
     </div>
