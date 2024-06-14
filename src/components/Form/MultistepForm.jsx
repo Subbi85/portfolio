@@ -1,6 +1,5 @@
 "use client"
 //Parent Control
-//This Component will control and manage steps and data
 
 import React, { useEffect } from 'react'
 import { useState } from 'react'
@@ -13,9 +12,6 @@ import StepD from "./StepD"
 import StepFinal from "./StepFinal"
 
 //Icons
-import { IoPersonOutline } from "react-icons/io5";
-import { MdAssuredWorkload } from "react-icons/md";
-import { FaRegMessage } from "react-icons/fa6";
 import { GiFinishLine } from "react-icons/gi";
 
 const MultistepForm = ({showStepNumber}) => {

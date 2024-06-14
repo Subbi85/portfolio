@@ -1,8 +1,6 @@
 import React from 'react'
 
 //Icons
-import { FaPhoneAlt } from "react-icons/fa";
-import { CiLocationOn } from "react-icons/ci";
 import { FaRegCopyright } from "react-icons/fa";
 
 const Footer = () => {
