@@ -87,7 +87,7 @@ const Projects = () => {
       img_path:Klempau,
       link:"https://vom-klempauer-hofsee.de/",
       company: privateLogo,
-      tech: "WordPress"
+      tech: "Wordpress"
     }
 ]
 
@@ -127,7 +127,7 @@ const Projects = () => {
   };
 
   const filteredProjects = projects.filter((project) => {
-    const matchesTech = !selectedTech.Neos && !selectedTech.Typo3 && !selectedTech.Craft ? true : selectedTech[project.tech];
+    const matchesTech = !selectedTech.Neos && !selectedTech.Typo3 && !selectedTech.Craft && !selectedTech.Wordpress ? true : selectedTech[project.tech];
     const matchesTitle = project.title.toLowerCase().includes(searchString.toLowerCase());
     return matchesTech && matchesTitle;
   });
@@ -181,6 +181,15 @@ const Projects = () => {
                   onChange={handleCheckboxChange}
                 />
                 <SiCraftcms size={30} />
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Wordpress"
+                  checked={selectedTech.Wordpress}
+                  onChange={handleCheckboxChange}
+                />
+                <FaWordpressSimple size={30} />
               </label>
             </div>
           </div>

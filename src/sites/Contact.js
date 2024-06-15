@@ -38,7 +38,7 @@ const Contact = () => {
         
           <div className='grid grid-cols-1 md:grid-cols-2 md:gap-2'>
             <MultistepForm showStepNumber={true}/>
-            <pre className="text-xs sm:block text-md md:text-sm mb-10 ml-6 max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10 max-h-[330px] monospace">
+            <pre className="hidden text-xs sm:block text-md md:text-sm mb-10 ml-6 max-w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10 max-h-[330px] monospace">
                 LarsSchleyer: <br/>{Object.keys(Schleyer).map(key => renderAttribute(key, Schleyer[key]))}
             </pre>
           </div>
