@@ -20,7 +20,7 @@ const Contact = () => {
 
   const renderAttribute = (key, value) => {
     return (
-        <span className="p-4">
+        <span className="p-4" key={key}>
             <span className="text-blue-500">{key}: </span>
             <span className="text-white">{JSON.stringify(value)}</span>
             <br/>

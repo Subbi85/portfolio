@@ -33,7 +33,7 @@ const Home = () => {
     <div className='h-full max-w-screen-lg mx-auto flex flex-col-reverse items-center justify-centerh-full px-4 md:flex-row text-white'>
         <div className='flex flex-col justify-center h-full'>
           <h2 id="typewriter" className='text-5xl md:text-6xl font-bold pr-5 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800'>Lars Schleyer -<br />Webentwickler:</h2>
-          <h2 className='text-5xl md:text-6xl font-bold pr-5 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800'>{typeEffect}</h2>
+          <h2 className='text-5xl md:text-6xl font-bold pr-5 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800'>{typeEffect || ''}</h2>
           
           <p className='text-gray-500 py-4 max-w-md'></p>
           <div>
