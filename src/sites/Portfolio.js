@@ -14,7 +14,7 @@ import Baugrund from '../assets/img/projects/baugrund.png';
 import Pfister from '../assets/img/projects/pfister.png';
 import SWAalen from '../assets/img/projects/SWAalen.png';
 import ECPOP from '../assets/img/projects/ECPOP.png';
-import iatul from '../assets/img/projects/IATUL.png';
+import IATUL from '../assets/img/projects/IATUL.png';
 import IACAPAP from '../assets/img/projects/IACAPAP.png';
 import SMHS from '../assets/img/projects/SMHS.png';
 import Klempau from '../assets/img/projects/klempau.png';
@@ -41,7 +41,7 @@ const shuffleArray = (array) => {
 const Projects = () => {
   const projects = [
     { id: 1, title: 'ECP Kongress', img_path: ECPOP, link: 'https://www.esp-congress.org/scientific-programme/online-programme.html', company: Globit, tech: 'Neos' },
-    { id: 2, title: 'IATUL', img_path: iatul, link: 'https://iatul.org/', company: Globit, tech: 'Neos' },
+    { id: 2, title: 'IATUL', img_path: IATUL, link: 'https://iatul.org/', company: Globit, tech: 'Neos' },
     { id: 3, title: 'Sports Summit', img_path: SMHS, link: 'https://www.sports-medicine-health-summit.de/', company: Globit, tech: 'Neos' },
     { id: 4, title: 'IACAPAP', img_path: IACAPAP, link: 'https://iacapap.org/', company: Globit, tech: 'Neos' },
     { id: 5, title: 'DB Musem', img_path: DBMuseum, link: 'https://www.dbmuseum.de/', company: Netzhaut, tech: 'Craft' },
@@ -186,7 +186,7 @@ const Projects = () => {
           <div className='flex justify-center'>
             <button
               onClick={handleMoreProjects}
-              className='text-white bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded-full'
+              className='text-white w-fit px-6 py-3 flex items-center rounded-lg bg-gradient-to-r from-blue-500 to-blue-800 cursor-pointer'
             >
               Mehr anzeigen
             </button>
