@@ -26,9 +26,52 @@ module.exports = {
         "primary-color": "var(--primary-color)",
         "secondary-color": "var(--secondary-color)"
       },
-      
+    
+    },
+    variants: {
+      extend: {
+        dropShadow: ['hover'],
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      addUtilities({
+        '.drop-shadow-red-500': {
+          filter: 'drop-shadow(0 4px 6px #ef4444)',
+        },
+        '.drop-shadow-blue-500': {
+          filter: 'drop-shadow(0 4px 6px #1e40af)',
+        },
+        '.drop-shadow-yellow-400': {
+          filter: 'drop-shadow(0 4px 6px #facc15)',
+        },
+        '.drop-shadow-purple-400': {
+          filter: 'drop-shadow(0 4px 6px #c084fc)',
+        },
+        '.drop-shadow-red-400': {
+          filter: 'drop-shadow(0 4px 6px #f87171)',
+        },
+        '.drop-shadow-orange-400': {
+          filter: 'drop-shadow(0 4px 6px #fb923c)',
+        },
+        '.drop-shadow-blue-400': {
+          filter: 'drop-shadow(0 4px 6px #9333ea)',
+        },
+        '.drop-shadow-purple-600': {
+          filter: 'drop-shadow(0 4px 6px #9333ea)',
+        },
+        '.drop-shadow-sky-500': {
+          filter: 'drop-shadow(0 4px 6px #0ea5e9)',
+        },
+
+
+
+
+
+
+      }, ['responsive', 'hover']);
+    }
+  ],
 }
 
