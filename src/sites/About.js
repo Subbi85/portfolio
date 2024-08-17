@@ -24,7 +24,7 @@ function About() {
           
 
           <div id="about_content" className='w-100'>
-            <div id="about_cards" className='flex flex-row md:grid grid-cols-2 gap-10 justify-between'>
+            <div id="about_cards" className='flex flex-col md:grid grid-cols-2 gap-10 justify-between'>
               <article className='group bg-blue-800 hover:bg-transparent hover:border-blue-800 border-solid border-2 border-transparent rounded-lg p-8 text-center duration-200 cursor-default min-w-[162px]'>
                 <FaAward size={45} className='group-hover:text-blue-800 text-center m-auto mb-4'/>
                 <h5 className='text-xl font-bold group-hover:text-blue-800'> Erfahrung</h5>
