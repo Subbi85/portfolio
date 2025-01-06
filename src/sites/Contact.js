@@ -3,13 +3,13 @@ import React from 'react'
 //Components
 import MultistepForm from '../components/Form/MultistepForm';
 
-const Contact = () => {
+const Contact = ({lightTheme}) => {
   const Schleyer = {
     "id": "1",
     "title":"Web Developer",
     "mail":"lars.schleyer@gmx.de",
     "location":"Stockelsdorf / Lübeck",
-    "experience":"3+ years",
+    "experience":"seit 2019",
     "languages":["HTML","CSS","JS","PHP"],
     "style":["Bootstrap", "Tailwind"],
     "inProgress":["React.js","Tailwind","MongoDB"],
@@ -29,10 +29,10 @@ const Contact = () => {
 };
 
   return (
-    <div name="kontakt" className='h-auto w-full bg-gradient-to-b from-black to-gray-500 p-4' id="kontakt">
+    <div name="kontakt" className={`h-auto w-full ${lightTheme ? 'bg-white' : 'bg-gradient-to-b from-black to-gray-500 p-4'} `} id="kontakt">
       <div className='w-full lg:max-w-screen-lg mx-auto flex flex-col justify-center text-white pt-6'>
           <div className='mt-[40px]'>
-              <p className='text-4xl font-bold border-b-4 border-blue-500 p-2 inline font-signature'>Kontakt</p>
+              <p className={`text-4xl font-bold border-b-4 border-blue-500 p-2 inline font-signature ${lightTheme ? 'text-black' : 'text-white'}`}>Kontakt</p>
               <p className='py-6 '></p>
           </div>
         

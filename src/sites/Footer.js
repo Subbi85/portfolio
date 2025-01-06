@@ -3,12 +3,12 @@ import React from 'react'
 //Icons
 import { FaRegCopyright } from "react-icons/fa";
 
-const Footer = () => {
+const Footer = ({lightTheme}) => {
   return (
-    <div name="footer" className='h-auto w-full bg-gray-500 p-4' id="kontakt">
-        <div className='w-full lg:max-w-screen-lg mx-auto flex flex-col justify-center text-white pt-6'>
+    <div name="footer" className={`h-auto w-full ${lightTheme ? 'bg-white' : 'bg-gray-500'} p-4`} id="kontakt">
+            <div className='w-full lg:max-w-screen-lg mx-auto flex flex-col justify-center text-white pt-6'>
             <div className='flex flex-col sm:flex-row justify-between p-6'>
-                <p className='py-2 flex jusify-center align-center'><FaRegCopyright size={15}/> <span className='px-2'>Lars Schleyer / Webentwickler</span></p>
+                <p className={`py-2 flex jusify-center align-center`}><FaRegCopyright size={15}/> <span className='px-2'>Lars Schleyer / Webentwickler</span></p>
             </div>
         </div>
     </div>

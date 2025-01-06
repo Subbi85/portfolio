@@ -1,84 +1,77 @@
 import React, { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
-
-import { FaRegMoon, FaHome } from "react-icons/fa";
-import { MdOutlineWbSunny, MdConnectWithoutContact  } from "react-icons/md";
-import { IoPerson, IoDocumentAttachOutline  } from "react-icons/io5";
+import { FaBars, FaTimes, FaRegMoon, FaHome, FaComputer } from "react-icons/fa";
+import { MdOutlineWbSunny, MdConnectWithoutContact } from "react-icons/md";
+import { IoPerson, IoDocumentAttachOutline } from "react-icons/io5";
 import { PiProjectorScreenChartDuotone } from "react-icons/pi";
-import { FaComputer } from "react-icons/fa6";
 
-const NavBar = ({lightTheme, setLightTheme}) => {
+const NavBar = ({ lightTheme, setLightTheme }) => {
+  const [nav, setNav] = useState(false);
+  const [activeLink, setActiveLink] = useState('#home'); // Track active link
+  
+  const toggleTheme = () => {
+    setLightTheme(!lightTheme);
+  };
 
-  const [nav, setNav] = useState(false)
-
-  const toggelTheme =()=>{
-    lightTheme ? setLightTheme(false) : setLightTheme(true)
-  }
-
-  const toggleIsActive=(e)=>{
-    const navLinks = document.querySelectorAll(".navLink");
-    navLinks.forEach((link) => {
-      link.classList.remove("isActive")
-    })
-    e.target.parentElement.classList.add("isActive")
-  }
+  const handleSetActive = (link) => {
+    setActiveLink(link);
+  };
 
   return (
-    <div className='flex justify-between items-center w-full h-20 text-white fixed bg-black px-4 z-10'>
+    <div className={`flex justify-between items-center w-full h-20 fixed px-4 z-10 ${lightTheme ? 'bg-white text-black' : 'bg-black text-white'}`}>
+      {/* Logo */}
       <div>
-        <a href="/#home">
-          <h1 id="title_logo" onClick={toggleIsActive} className='navLink text-5xl font-signature ml-2 text-white'>Schleyer</h1>
+        <a href="/#home" onClick={() => handleSetActive('#home')} className={`text-5xl font-signature ml-2 ${activeLink === '#home' ? 'isActive' : ''}`}>
+          Schleyer
         </a>
       </div>
-        <div className='invisible'>
-          {lightTheme ? <div onClick={toggelTheme}><MdOutlineWbSunny size={30} className='duration-200'/></div> : <div onClick={toggelTheme}><FaRegMoon size={30} className='duration-200'/></div> }
+
+      {/* Theme Toggle Button
+      <div className='md:flex'>
+        <div onClick={toggleTheme} className='cursor-pointer'>
+          {lightTheme ? <MdOutlineWbSunny size={30} className='duration-200 text-black' /> : <FaRegMoon size={30} className='duration-200 text-gray-500' />}
         </div>
-          <ul className='hidden md:flex desktop-menu'>
-          <input
-            className="me-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-black/25 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-white after:shadow-switch-2 after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ms-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-switch-1 checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-switch-3 focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ms-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-switch-3 checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-white/25 dark:after:bg-surface-dark dark:checked:bg-primary dark:checked:after:bg-primary invisible"
-            type="checkbox"
-            role="switch"
-            id="flexSwitchCheckDefault01" 
-            onClick={toggelTheme}/>
+      </div> */}
 
-          <a href="/#about" onClick={toggleIsActive} className='navLink hover:text-blue-500 px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
-              <h1>Über mich</h1>
-          </a>
-          <a href="/#portfolio" onClick={toggleIsActive} className='navLink hover:text-blue-500 px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
-              <h1>Portfolio</h1>
-          </a>
-          <a href="/#techstack" onClick={toggleIsActive} className='navLink hover:text-blue-500 px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
-              <h1>Techstack</h1>
-          </a>
-          <a href="/#lebenslauf" onClick={toggleIsActive} className='navLink hover:text-blue-500 px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
-              <h1>Lebenslauf</h1>
-          </a>               
-          <a href="/#kontakt" onClick={toggleIsActive} className='navLink hover:text-blue-500 px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
-              <h1>Kontakt</h1>
-          </a>          
-        </ul>
+      {/* Desktop Menu */}
+      <ul className='hidden md:flex desktop-menu'>
+        <a href="/#about" onClick={() => handleSetActive('#about')} className={`navLink px-4 cursor-pointer capitalize font-medium ${activeLink === '#about' ? 'text-blue-500' : lightTheme ? 'text-black' : 'text-gray-500'} hover:scale-105 duration-200`}>
+          Über mich
+        </a>
+        <a href="/#portfolio" onClick={() => handleSetActive('#portfolio')} className={`navLink px-4 cursor-pointer capitalize font-medium ${activeLink === '#portfolio' ? 'text-blue-500' : lightTheme ? 'text-black' : 'text-gray-500'} hover:scale-105 duration-200`}>
+          Portfolio
+        </a>
+        <a href="/#techstack" onClick={() => handleSetActive('#techstack')} className={`navLink px-4 cursor-pointer capitalize font-medium ${activeLink === '#techstack' ? 'text-blue-500' : lightTheme ? 'text-black' : 'text-gray-500'} hover:scale-105 duration-200`}>
+          Techstack
+        </a>
+        <a href="/#lebenslauf" onClick={() => handleSetActive('#lebenslauf')} className={`navLink px-4 cursor-pointer capitalize font-medium ${activeLink === '#lebenslauf' ? 'text-blue-500' : lightTheme ? 'text-black' : 'text-gray-500'} hover:scale-105 duration-200`}>
+          Lebenslauf
+        </a>
+        <a href="/#kontakt" onClick={() => handleSetActive('#kontakt')} className={`navLink px-4 cursor-pointer capitalize font-medium ${activeLink === '#kontakt' ? 'text-blue-500' : lightTheme ? 'text-black' : 'text-gray-500'} hover:scale-105 duration-200`}>
+          Kontakt
+        </a>
+      </ul>
 
-      <div onClick={()=> setNav(!nav)} className='cursor-pointer pr-4 z-1 text-gray-500 md:hidden'>
-        {nav ? <FaTimes size={30} /> : <FaBars size={30}/>}
+      {/* Mobile Menu Icon */}
+      <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden'>
+        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
 
+      {/* Mobile Menu */}
       {nav && (
-
-      <ul id="navMobile" className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-blue-800 text-gray-500 md:hidden'>
-        
-        <li onClick={()=> setNav(!nav)} className='cursor-pointer pr-4 z-1 text-gray-500 hover:text-blue-500 absolute top-6 right-4 md:hidden'>
-          {nav ? <FaTimes size={30} /> : <FaBars size={30}/>}
-        </li>
-        <li className='px-4 cursor-pointer py-6 text-4xl capitalize navLink hover:text-blue-500'><a href="/#home" rel="noreferrer" onClick={()=> setNav(!nav)} className='flex flex-row'><FaHome className='mr-2' size={40}/><span>Home</span></a></li>
-        <li className='px-4 cursor-pointer py-6 text-4xl capitalize navLink hover:text-blue-500'><a href="/#about" rel="noreferrer" onClick={()=> setNav(!nav)} className='flex flex-row'><IoPerson className='mr-2' size={40}/><span>Über mich</span></a></li>
-        <li className='px-4 cursor-pointer py-6 text-4xl capitalize navLink hover:text-blue-500'><a href="/#portfolio" rel="noreferrer" onClick={()=> setNav(!nav)} className='flex flex-row'><PiProjectorScreenChartDuotone className='mr-2' size={40}/><span>Portfolio</span></a></li>
-        <li className='px-4 cursor-pointer py-6 text-4xl capitalize navLink hover:text-blue-500'><a href="/#techstack" rel="noreferrer" onClick={()=> setNav(!nav)} className='flex flex-row'><FaComputer className='mr-2' size={40}/><span>Techstack</span></a></li>
-        <li className='px-4 cursor-pointer py-6 text-4xl capitalize navLink hover:text-blue-500'><a href="/#lebenslauf" rel="noreferrer" onClick={()=> setNav(!nav)} className='flex flex-row'><IoDocumentAttachOutline className='mr-2' size={40}/><span>CV</span></a></li>
-        <li className='px-4 cursor-pointer py-6 text-4xl capitalize navLink hover:text-blue-500'><a href="/#kontakt" rel="noreferrer" onClick={()=> setNav(!nav)} className='flex flex-row'><MdConnectWithoutContact className='mr-2' size={40}/><span>Kontakt</span></a></li>
-      </ul>
+        <ul className={`flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen ${lightTheme ? 'bg-white text-black' : 'bg-gradient-to-b from-black to-blue-800 text-gray-500'}`}>
+          <li onClick={() => setNav(false)} className='cursor-pointer pr-4 z-10 hover:text-blue-500 absolute top-6 right-4'>
+            {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+          </li>
+          <li className={`px-4 py-6 text-4xl capitalize ${activeLink === '#home' ? 'text-blue-500' : ''}`}><a href="/#home" onClick={() => { setNav(false); handleSetActive('#home'); }}><FaHome className='mr-2' size={40}/>Home</a></li>
+          <li className={`px-4 py-6 text-4xl capitalize ${activeLink === '#about' ? 'text-blue-500' : ''}`}><a href="/#about" onClick={() => { setNav(false); handleSetActive('#about'); }}><IoPerson className='mr-2' size={40}/>Über mich</a></li>
+          <li className={`px-4 py-6 text-4xl capitalize ${activeLink === '#portfolio' ? 'text-blue-500' : ''}`}><a href="/#portfolio" onClick={() => { setNav(false); handleSetActive('#portfolio'); }}><PiProjectorScreenChartDuotone className='mr-2' size={40}/>Portfolio</a></li>
+          <li className={`px-4 py-6 text-4xl capitalize ${activeLink === '#techstack' ? 'text-blue-500' : ''}`}><a href="/#techstack" onClick={() => { setNav(false); handleSetActive('#techstack'); }}><IoDocumentAttachOutline className='mr-2' size={40}/>Techstack</a></li>
+          <li className={`px-4 py-6 text-4xl capitalize ${activeLink === '#lebenslauf' ? 'text-blue-500' : ''}`}><a href="/#lebenslauf" onClick={() => { setNav(false); handleSetActive('#lebenslauf'); }}><IoDocumentAttachOutline className='mr-2' size={40}/>Lebenslauf</a></li>
+          <li className={`px-4 py-6 text-4xl capitalize ${activeLink === '#kontakt' ? 'text-blue-500' : ''}`}><a href="/#kontakt" onClick={() => { setNav(false); handleSetActive('#kontakt'); }}><MdConnectWithoutContact className='mr-2' size={40}/>Kontakt</a></li>
+        </ul>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

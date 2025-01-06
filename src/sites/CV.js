@@ -6,7 +6,7 @@ import { SiCraftcms } from "react-icons/si";
 import { FaHtml5, FaNeos, FaBootstrap, FaTypo3, FaPhp, FaCss3Alt, FaArrowAltCircleDown } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 
-export default function App() {
+export default function App( {lightTheme} ) {
 
   const [visible, setVisible] = useState(false)
   const [nhVisible, setNhVisible] = useState(false)
@@ -20,10 +20,10 @@ export default function App() {
   }
 
   return (
-    <div name="lebenslauf" id="lebenslauf" className='bg-gradient-to-b from-gray-500 to-black w-full p-4 h-auto scroll-mt-5'>
+    <div name="lebenslauf" id="lebenslauf" className={`${lightTheme ? 'bg-white':'bg-gradient-to-b from-gray-500 to-black'} w-full p-4 h-auto scroll-mt-5`}>
       <div className='w-12/12 md:w-full lg:max-w-screen-lg mx-auto flex flex-col justify-center text-white h-auto mt-[60px]'>
             <div>
-                <p className='text-4xl font-bold border-b-4 border-blue-800 inline font-signature'>Meine Stationen</p>
+                <p className={`text-4xl font-bold border-b-4 border-blue-800 inline font-signature ${lightTheme ? 'text-black' : 'text-white'}`}>Meine Stationen</p>
                 <p className='py-6 '></p>
             </div>
 
@@ -93,7 +93,7 @@ export default function App() {
                         className="text-xl text-info transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700"
                       >
                         <span className='font-bold'>Webentwickler NEOS</span>
-                        <p>Globit GmbH - Globit Internet Servixe Provider</p>
+                        <p>Globit GmbH - Globit Internet Service Provider</p>
                       </a>
                     </div>
                     <p className="mb-6 text-neutral-700 dark:text-neutral-200">
@@ -144,7 +144,7 @@ export default function App() {
                         href="https://www.netzhaut.de/" target="_blank" rel="noreferrer"
                         className="text-xl text-info transition duration-150 ease-in-out"
                       >
-                        <span className='font-bold'>Webentwickler Craft CMS</span>
+                        <span className='font-bold'>Webentwickler Craft</span>
                         <p>Netz-haut GmbH, Würzburg</p>
                       </a>
                     </div>

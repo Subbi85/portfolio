@@ -38,7 +38,7 @@ const shuffleArray = (array) => {
   return shuffledArray;
 };
 
-const Projects = () => {
+const Projects = ({lightTheme}) => {
   const projects = [
     { id: 1, title: 'ECP Kongress', img_path: ECPOP, link: 'https://www.esp-congress.org/scientific-programme/online-programme.html', company: Globit, tech: 'Neos' },
     { id: 2, title: 'IATUL', img_path: IATUL, link: 'https://iatul.org/', company: Globit, tech: 'Neos' },
@@ -103,7 +103,7 @@ const Projects = () => {
   });
 
   return (
-    <div name="portfolio" id="portfolio" className='w-full md:h-auto bg-gradient-to-b from-gray-800 to-black text-white'>
+    <div name="portfolio" id="portfolio" className={`w-full md:h-auto ${lightTheme ? 'bg-white' : 'bg-gradient-to-b from-gray-800 to-black text-white'}`}>
       <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-auto'>
         <div className='pb-8 mt-[80px]'>
           <p className='text-4xl font-bold inline border-b-4 border-blue-800 font-signature'>Portfolio</p>

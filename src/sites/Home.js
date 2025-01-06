@@ -5,7 +5,7 @@ import { useTypewriter } from 'react-simple-typewriter'
 import HeroImage from '../assets/img/Hero.png'
 import Sociallinks from '../components/Sociallinks'
 
-const Home = () => {
+const Home = ({ lightTheme }) => {
 
   const [typeEffect] = useTypewriter({
     words:['Frontend', 'CMS', 'PHP', 'JS/React'],
@@ -15,7 +15,7 @@ const Home = () => {
   })
 
   return (
-    <div name="home" className='h-screen w-full bg-black' id="home">
+    <div name="home" className={`h-screen w-full ${lightTheme ? 'bg-white text-black' : 'bg-black text-white'}`} id="home">
     <div className="area" >
     <ul className="circles">
               <li></li>
